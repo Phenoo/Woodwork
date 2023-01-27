@@ -41,9 +41,9 @@ const Featured = () => {
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <button className="uppercase font-bold">
+          <button className="uppercase font-bold text-xl">
             <Link href='/shop'> 
-              shop all 
+              shop all
             </Link>
             </button>
         </div>
