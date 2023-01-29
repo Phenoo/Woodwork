@@ -45,14 +45,14 @@ const Hero = () => {
 
     return (
       <Container>
-        <div className='my-5 h-[700px]'>
+        <div className='my-16 h-[700px] '>
         <div className='flex justify-between flex-row'>
           <div>
             <h2 className='text-5xl font-bold uppercase'>
               stylish furniture
             </h2>
           </div>
-          <div>
+          <div className=''>
             <button className='rounded-xl border-black border py-1 px-2'>
               wood
             </button>

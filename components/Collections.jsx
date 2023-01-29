@@ -1,5 +1,5 @@
 import React from 'react'
-import Tophead from '../components/Tophead'
+import Tophead from './Tophead'
 import Image from 'next/image'
 
 import Img1 from '.././public/assets/collect1.jpeg'

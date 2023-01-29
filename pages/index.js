@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Hero from '../components/hero'
+import Hero from '../components/Hero'
 import Featured from '../components/Featured'
 import NewArrivals from '../components/NewArrivals'
 import Brands from '../components/Brands'
-import Collections from './Collections'
+import Collections from '../components/Collections'
 import ArticleSection from '../components/ArticleSection'
+import Review from '../components/Review'
 
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
         <NewArrivals />
         <Collections />
         <Brands />
+        <Review />
         <ArticleSection />
       </main>
 

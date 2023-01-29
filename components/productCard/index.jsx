@@ -11,7 +11,7 @@ const ProductCard = ({item}) => {
           src={item.image}
           alt={item.name}
           width={200}
-          height={250}
+          height={270}
         />
       </div>
       <div className="flex justify-between flex-row my-3" >

@@ -25,26 +25,26 @@ const ArticleSection = () => {
     }
   ]
   return (
-    <div>
+    <div className="my-16">
       <Tophead title='enjoy our articles' align='text-center'/>
-      <Container>
-        <div className='py-4 mt-4 border-y border-black'>
-          <div className="grid grid-cols-3 place-items-center">
-                {
-                  data.map((item, index) => (
-                    <BlogCard key={index} item={item} />
-                  ))
-                }
-          </div>
-          <div className="flex justify-center mt-6">
-            <button className='font-bold uppercase'>
-              <Link href='/blogs'>
-                read all articles
-              </Link>
-            </button>
-          </div>        
+        <div className='py-8 mt-4 border-y border-black'>
+          <Container>
+            <div className="grid grid-cols-3 place-items-center">
+                  {
+                    data.map((item, index) => (
+                      <BlogCard key={index} item={item} />
+                    ))
+                  }
+            </div>
+            <div className="flex justify-center mt-8">
+              <button className='font-bold uppercase border border-black p-2 md:p-3'>
+                <Link href='/blogs'>
+                  read all articles
+                </Link>
+              </button>
+            </div> 
+          </Container>       
         </div>
-      </Container>
     </div>
   )
 }

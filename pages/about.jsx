@@ -1,9 +1,49 @@
 import React from 'react'
+import Container from '../components/Container'
+import AboutText from '../components/About/AboutText'
+import Image from 'next/image'
+
+import Img1 from '../public/assets/blogcard.jpeg'
+import Img2 from '../public/assets/about2.jpeg'
+import Mission from '../components/About/Mission'
 
 const About = () => {
   return (
     <div>
-      hhhh
+      <Container>
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-16">
+          <div>
+            <h2 className={`text-4xl font-bold uppercase md:mx-[100px]`}>
+              furniture e-commerce that brand your style.
+            </h2>
+          </div>
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequuntur reprehenderit explicabo odit harum cumque provident, quos doloremque quasi maxime ipsum aspernatur commodi modi possimus temporibus enim aut est maiores labore iure magnam architecto accusantium minima? Dolore unde adipisci deserunt dolorem libero esse repellendus a ducimus eum illo ea, maxime sit
+            </p>
+          </div>
+        </div>
+        <div className='grid lg:grid-cols-2 gap-4 place-items-center w-full my-12 py-12'>
+          <div className='w-full'>
+            <Image
+              src={Img1}
+              alt='about'
+              width={400}
+              height={300}
+            />
+          </div>
+          <div className='w-full'>
+            <Image
+                src={Img2}
+                alt='about'
+                width={500}
+                height={300}
+              />
+          </div>
+        </div>
+      </Container>
+      <AboutText />
+      <Mission />
     </div>
   )
 }

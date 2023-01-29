@@ -1,8 +1,9 @@
 import React from 'react'
+import s from './Container.module.css'
 
 const Container = ({ children }) => {
   return (
-    <div className='mx-auto max-w-8xl px-6'>
+    <div className={s.container}>
       {children}
     </div>
   )

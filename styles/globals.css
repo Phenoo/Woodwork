@@ -1,7 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Itim&family=Inter&family=Oswald&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Itim&family=Oswald&display=swap');
 html,
 body {
     padding: 0;
@@ -25,22 +25,36 @@ img {
 
 h1,
 h2 {
-    font-family: 'Anton';
+    font-family: 'Anton', sans-serif;
 }
 
 a,
-button,
+li,
+button {
+    font-family: 'Itim', sans-serif;
+}
+
 p {
-    font-family: 'Itim';
+    font-family: 'Inter', sans-serif;
 }
 
 h4,
+h5,
 h6 {
     font-family: "Oswald", sans-serif;
 }
 
 * {
     box-sizing: border-box;
+}
+
+button {
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(0.8);
+    transition: all 0.3s ease-in-out;
 }
 
 @media (prefers-color-scheme: dark) {
