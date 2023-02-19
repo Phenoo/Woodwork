@@ -4,7 +4,7 @@ import AboutText from '../components/About/AboutText'
 import Image from 'next/image'
 
 import Img1 from '../public/assets/blogcard.jpeg'
-import Img2 from '../public/assets/about2.jpeg'
+// import Img2 from ''
 import Mission from '../components/About/Mission'
 
 const About = () => {
@@ -26,7 +26,7 @@ const About = () => {
         <div className='grid lg:grid-cols-2 gap-4 place-items-center w-full my-12 py-12'>
           <div className='w-full'>
             <Image
-              src={Img1}
+              src='https://source.unsplash.com/HaTQS_KI-1o'
               alt='about'
               width={400}
               height={300}
@@ -34,7 +34,7 @@ const About = () => {
           </div>
           <div className='w-full'>
             <Image
-                src={Img2}
+                src='https://source.unsplash.com/WL2141EyK1c'
                 alt='about'
                 width={500}
                 height={300}

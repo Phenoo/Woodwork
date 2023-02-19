@@ -2,9 +2,14 @@ import React from 'react'
 import Link from 'next/link'
 import Logo from './Logo'
 import Container from './Container'
-import UserNav from './userNav'
+
+import { AiOutlineHeart } from 'react-icons/ai'
+
+import { useStateContext } from '../context/StateContext'
+import Cart from './Cart'
 
 const Navbar = () => {
+  const { showCart, setShowCart } = useStateContext();
   return (
     <Container >
       <div className='relative flex flex-row justify-between my-2 py-2 md:py-2 border-y-4 border-[#111]'>
@@ -27,21 +32,26 @@ const Navbar = () => {
           </Link>
         </div>
         <div className=" flex items-center justify-end flex-1 space-x-8">
-          <div>
-            <Link href='/cart' className='flex flex-row gap-2 items-center'>
+          <div className=" flex items-center gap-4">
+            <button>
+              <Link href='/wishlist' className=" text-2xl">
+                <AiOutlineHeart />
+              </Link>
+            </button>
+            <button className='flex flex-row gap-2 items-center' onClick={() => setShowCart(true)}>
               <span>
                 cart           
               </span>
               <span className='rounded-full border border-black flex items-center justify-center px-2 py-1'>
                 0
               </span>
-            </Link>
+            </button>
           </div>
-          <UserNav />
         </div>
         <div>
         </div>
       </div>
+      {showCart && <Cart />}
     </Container>
   )
 }

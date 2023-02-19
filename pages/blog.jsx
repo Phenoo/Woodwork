@@ -71,7 +71,8 @@ const Blogs = () => {
             </div>
           </Container>
         </div>
-        <div className='py-8 border-b border-black'>
+        <div className='py-8 mt-8 border-b border-black'>
+          <Tophead title='enjoy our articles' align='text-center'/>
           <div className="grid grid-cols-3 gap-4 place-items-center mt-12">
                 {
                   data.map((item, index) => (

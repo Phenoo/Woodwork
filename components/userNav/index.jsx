@@ -4,9 +4,6 @@ import Link from 'next/link'
 const UserNav = () => {
   return (
     <nav className=' ml-6 space-x-4 lg:block'>
-      <Link href='/search'>
-        search
-      </Link>
       <Link href='/contact'>
         contact
       </Link>

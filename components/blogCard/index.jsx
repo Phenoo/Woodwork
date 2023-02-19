@@ -4,7 +4,7 @@ import { AiOutlineCalendar, AiOutlineUser } from 'react-icons/ai'
 
 const BlogCard = ({item}) => {
   return (
-    <article className='w-[300px] lg:w-[340px] h-[425px] p-2 border border-black'>
+    <article className='w-[300px] lg:w-[340px] h-[435px] p-2 border border-black'>
       <div className='h-[250px]'>
         <Image  
           src={item.image}
@@ -33,7 +33,7 @@ const BlogCard = ({item}) => {
         <h4 className='font-bold capitalize text-xl'>
           {item.name} is the bets thing here
         </h4>
-        <p>
+        <p className='mt-2'>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit namab.
         </p>
         <button className='font-bold text-md uppercase mt-2 border border-black p-1 px-2'>

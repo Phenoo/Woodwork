@@ -1,14 +1,13 @@
 import React from 'react'
 
-import s from './Social.module.css'
 
-import {AiOutlineInstagram, AiOutlineFacebook, AiOutlineTwitter} from 'react-icons/ai'
-import { FaPinterest  } from 'react-icons/fa'
+import {AiOutlineInstagram,  AiOutlineTwitter} from 'react-icons/ai'
+import { FaPinterest, FaFacebook  } from 'react-icons/fa'
 
 const Social = () => {
   const social = [
     {
-      icon: <AiOutlineFacebook />,
+      icon: <FaFacebook />,
       link: "/sssss"
     },
     {

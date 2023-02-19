@@ -1,10 +1,14 @@
 import React from 'react'
-import Link from 'next/link';
+import Image from 'next/image';
 
 import Logo from '../Logo'
 import Container from '../Container'
 import Social from './Social';
 
+import s from './Social.module.css'
+
+
+import Img1 from '../../public/assets/saw.png'
 
 const Footer = () => {
   const info = ["Our story", "faq", "returns", "terms of service", "privacy policy"];
@@ -16,7 +20,7 @@ const Footer = () => {
       <Container>
         <div className="">
           <Logo />
-          <div className="my-4 grid grid-cols-4 gap-12">
+          <div className="my-4 grid md:grid-cols-3 lg:grid-cols-4 gap-12">
             <div>
               <h6 className='font-bold text-xl'>
                 Info
@@ -50,6 +54,14 @@ const Footer = () => {
               </ul>
             </div>
             <Social />
+            <div className={s.saw}>
+              <Image
+                src={Img1}
+                alt='footer-image'
+                width={40}
+                height={40}
+              />
+            </div>
           </div>
         </div>
         <div className='border-t-2 border-black py-3 mt-8 flex flex-col justify-center md:flex-row md:justify-between'>

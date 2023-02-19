@@ -1,14 +1,15 @@
+import React from 'react'
+import SidebarLayout from '../SidebarLayout/index'
+
 import s from './CartSidebarView.module.css'
 
-import SidebarLayout from '../SidebarLayout/SidebarLayout'
 import Bag from '../icons/Bag'
+import Sidebar from '../Sidebar/index'
 
-const CartSidebarView = () => {
+const Cart = () => {
   return (
-    <SidebarLayout
-      className={s.empty}
-      handleClose={handleClose}
-    >
+    <Sidebar>
+      <SidebarLayout>
         <div className="flex-1 px-4 flex flex-col justify-center items-center">
           <span className="border border-dashed border-primary rounded-full flex items-center justify-center w-16 h-16 p-12 bg-secondary text-secondary">
             <Bag className="absolute" />
@@ -20,8 +21,11 @@ const CartSidebarView = () => {
             Biscuit oat cake wafer icing ice cream tiramisu pudding cupcake.
           </p>
         </div>
-    </SidebarLayout>
-  )
+      </SidebarLayout>
+    </Sidebar>
+
+    )
 }
 
-export default CartSidebarView
+export default Cart
+
