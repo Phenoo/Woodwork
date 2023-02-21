@@ -1,34 +1,34 @@
 import Image from "next/image";
 import { urlFor } from "../../utils/client";
 
-
+import Link from 'next/link'
 
 const ProductCard = ({item}) => {
-  const {title, price, tag, mainImage} = item;
+  const {title, price, stock, mainImage, slug, _id} = item;
   return(
-    <div className="w-[260px] h-[350px] flex justify-between flex-col border-l-2 border-black px-2 cursor-pointer">
-      <div className="relative h-[270px] p-1">
-        <p className="absolute p-2 m-1 bg-white rounded-2xl px-4">
-          instock
-        </p>
+    <div className="w-[260px] h-[350px] flex justify-between flex-col border-l-2 border-black px-2 cursor-pointer animated fadeIn" key={_id}>
+    <Link href={"/product/" +  slug.current}>
+          <div className="relative h-[270px] p-1">
         {
           mainImage &&         
-          <Image
-            src={urlFor(mainImage).url()}
-            alt={title}
-            width={200}
-            height={270}
-          />
+            <Image
+              src={urlFor(mainImage).url()}
+              alt={title}
+              width={200}
+              height={270}
+            />
         }
-      </div>
+        </div>
+      </Link>
+
+      <h5>
+      {title}
+      </h5>
       <div className="flex justify-between flex-row my-3" >
         <div>
-          <h5>
-            {title}
-          </h5>
-          <p className="font-bold capitalize">
-            {/* #{item.tag} */}
-          </p>
+        {
+        stock ? <h6 className="text-[#06a94d] capitalize font-light">stock</h6> : <h6 className="text-[#f00] capitalize font-light">out stock</h6>
+      }
         </div>
         <div>
           <h6 className="font-bold">
