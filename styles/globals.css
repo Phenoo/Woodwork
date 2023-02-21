@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Itim&family=Montserrat&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Itim&family=Montserrat&family=Oswald&family=Cabin&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,7 +35,7 @@ button {
 }
 
 p {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Cabin', sans-serif;
 }
 
 h4,
@@ -53,7 +53,7 @@ button {
 }
 
 button:hover {
-    transform: scale(0.8);
+    transform: scale(0.95);
     transition: all 0.3s ease-in-out;
 }
 
