@@ -9,10 +9,10 @@ import Collections from '../components/Collections'
 import ArticleSection from '../components/ArticleSection'
 import Review from '../components/Review'
 
-import { sanityClient } from '../../utils/client'
+import { sanityClient } from './../utils/client'
 
 export default function Home({posts}) {
-  const postsThree = posts.filter((item, index) => index > 3)
+  const postsThree = posts.filter((item, index) => index < 4)
   return (
     <div className={styles.container}>
       <Head>
@@ -23,9 +23,9 @@ export default function Home({posts}) {
       <main className=''>
         <Hero />
         <Featured postsThree={postsThree} />
+        <Brands />
         <NewArrivals postsThree={postsThree}  />
         <Collections  />
-        <Brands />
         <Review />
         <ArticleSection />
       </main>

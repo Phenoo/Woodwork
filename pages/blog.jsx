@@ -48,8 +48,8 @@ const Blogs = () => {
       <div className="my-16">
         <div className='mt-8 border-y border-black'>
           <Container>
-            <div className='grid grid-cols-3 place-items-center px-4 md:px-16'>
-              <div className='py-4 md:py-8 my-6 md:my-12'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 place-items-center px-4 md:px-16'>
+              <div className='py-4 md:py-8 my-4 md:my-12'>
                 <h4 className='font-bold capitalize text-3xl md:text-4xl'>
                   wooden cushion: auto-generated future template
                 </h4>
@@ -61,10 +61,11 @@ const Blogs = () => {
                 </button>
               </div>
               <div className='hidden md:flex border-l-2 h-full border-black' />
-              <div className='py-8'>
+              <div className=' md:py-8 w-[300px] h-[300px] order-1'>
                 <Image 
                   src={Img1}
                   width={500}
+                  objectfit='contain'
                   alt='blog image'
                   />
               </div>
@@ -73,7 +74,7 @@ const Blogs = () => {
         </div>
         <div className='py-8 mt-8 border-b border-black'>
           <Tophead title='enjoy our articles' align='text-center'/>
-          <div className="grid grid-cols-3 gap-4 place-items-center mt-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center mt-12">
                 {
                   data.map((item, index) => (
                     <BlogCard key={index} item={item} />

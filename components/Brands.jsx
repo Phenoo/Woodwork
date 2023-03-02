@@ -31,7 +31,7 @@ const Brands = () => {
       <div className="my-4 border-y border-black flex flex-col justify-center items-center">
         <div className="grid grid-cols-5 ">
           {icons.map((item) => (
-            <span key={item.id} className=" flex justify-center items-center border-l-2 border-black px-6 md:px-12 cursor-pointer text-3xl md:text-5xl h-[150px]">
+            <span key={item.id} className=" flex justify-center items-center border-l-2 border-black px-6 md:px-12 cursor-pointer text-3xl md:text-5xl h-[90px] lg:h-[150px]">
               {item.icon}
             </span>
           ))}

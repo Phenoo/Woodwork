@@ -9,9 +9,9 @@ import Img2 from '.././public/assets/collect2.jpeg'
 
 const Collections = () => {
   return (
-    <div className="bg-[#4e3e2c] p-4 md:p-12">
+    <div className="bg-[#4e3e2c] px-4 py-8 md:p-12">
       <Tophead title="shop the collections" align='text-left' />
-      <div className="grid grid-cols-2 mt-4 place-items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 mt-4 place-items-center py-4">
         <article className='bg-[#fff] p-4 rounded-sm flex justify-between flex-row max-w-[600px] h-[400px]  cursor-pointer'>
           <div>
             <h4 className="text-2xl font-bold capitalize mb-1">

@@ -75,6 +75,33 @@ button:hover {
     z-index: 100;
 }
 
+.reSwiper{
+    height: 300px;
+    width: 100%;
+}
+
+.reSwiper .swiperslide{
+    width: auto;
+}
+
+.reSwiper .swiper-pagination-bullet{
+    background: #111;
+}
+
+.mySwiper{
+    height: 500px;
+    width: 100%;
+}
+
+
+.mySwiper .swiperslide{
+    width: auto;
+}
+
+.mySwiper .swiper-pagination-bullet{
+    background: #111;
+}
+
 .fixedxx {
     position: fixed
 }

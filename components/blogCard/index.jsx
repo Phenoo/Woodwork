@@ -4,7 +4,7 @@ import { AiOutlineCalendar, AiOutlineUser } from 'react-icons/ai'
 
 const BlogCard = ({item}) => {
   return (
-    <article className='w-[300px] lg:w-[340px] h-[435px] p-2 border border-black'>
+    <article className='w-[320px] lg:w-[340px] h-[435px] p-2 border border-black'>
       <div className='h-[250px]'>
         <Image  
           src={item.image}

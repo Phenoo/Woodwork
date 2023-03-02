@@ -8,8 +8,8 @@ const Mission = () => {
   return (
     <div className="border border-black ">
       <Container>
-        <div className='grid grid-cols-3 place-items-center gap-4'>
-          <div className='py-4 md:py-8 my-6 md:my-12'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 place-items-center gap-4'>
+          <div className='py-1 md:py-8 my-3 md:my-12 order-2 lg:order-none'>
             <Image 
               src={Img1}
               alt='values'
@@ -17,8 +17,8 @@ const Mission = () => {
             <p className='my-6'>
             </p>
           </div>
-          <div className='hidden md:flex border-l-2 h-full border-black' />
-          <div className='py-8'>
+          <div className='hidden lg:flex border-l-2 h-full border-black' />
+          <div className='py-8 order-1 lg:order-none'>
             <Tophead title='our values' />
             <br />
             <p>

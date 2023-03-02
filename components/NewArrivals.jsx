@@ -11,7 +11,7 @@ const NewArrivals = ({postsThree}) => {
       <div className="my-16">
         <Tophead title="New arrivials" align='text-center' />
         <div className="my-4 border-y border-black flex flex-col justify-center items-center">
-          <div className="grid grid-cols-4">
+          <div className="flex gap-4 flex-wrap justify-center">
             {
               postsThree.map((item) => (
                 <ProductCard key={item._id} item={item} />

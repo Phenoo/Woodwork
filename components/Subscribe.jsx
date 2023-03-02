@@ -9,7 +9,7 @@ const Subscribe = () => {
       <div className='mt-4'>
         <div className='flex'>
           <form>
-            <input type='email' placeholder='Enter Your Email Address' className='w-[250px] p-2 py-4 rounded text-sm outline-none rounded-r-none' required/>
+            <input type='email' placeholder='Enter Your Email Address' className='w-[250px] p-2 py-4 border-2 border-grey  rounded text-sm outline-none rounded-r-none' required/>
           </form>
           <button className='bg-black text-white capitalize p-2 px-4 rounded-md rounded-l-none'> 
             subscribe

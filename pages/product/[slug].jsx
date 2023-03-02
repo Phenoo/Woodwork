@@ -19,7 +19,7 @@ const SinglePage = ({post}) => {
               src={urlFor(mainImage).url()}
               alt={title}
               width={400}
-              height={350}
+              height={390}
               />
           </div>
           <div>

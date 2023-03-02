@@ -13,7 +13,7 @@ const About = () => {
       <Container>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-16">
           <div>
-            <h2 className={`text-4xl font-bold uppercase md:mx-[100px]`}>
+            <h2 className={`text-2xl md:text-4xl font-bold uppercase md:mx-[100px]`}>
               furniture e-commerce that brand your style.
             </h2>
           </div>

@@ -7,6 +7,16 @@ import Image from 'next/image'
 
 import Img1 from '../../public/assets/google-logo.png'
 
+import { Pagination } from 'swiper';
+// Direct React component imports
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Styles must use direct files imports
+import "swiper/css";
+import "swiper/css/pagination";
+
+
+
 const Review = () => {
   const items = [
     { id: 1,
@@ -25,14 +35,14 @@ const Review = () => {
 
 
   return (
-    <div className="my-16">
+    <div className="my-20">
       <div className="mx-4 md:mx-8">
         <Tophead title="our user reviews" />
       </div>
       <div className="border-y border-black py-8 my-4">
         <Container>
-          <div className="flex flex-row gap-12">
-            <div className='bg-white w-[300px] p-2 rounded-md flex flex-col justify-center items-center cursor-pointer'>
+          <div className="flex flex-col lg:flex-row gap-12">
+            <div className='shadow-md w-full lg:w-[300px] p-4 rounded-md flex flex-col justify-center items-center cursor-pointer'>
                 <span>
                   <Image
                     src={Img1}
@@ -58,12 +68,26 @@ const Review = () => {
                   Average
                 </h6>
             </div>
-            <div className='grid grid-cols-3 gap-4'>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
+
+               <Swiper
+                    slidesPerView={"auto"}
+                    spaceBetween={40}
+                    pagination={{
+                      clickable: true,
+                    }}
+                    modules={[Pagination]}
+                    className="reSwiper"
+              >
               {
-                items.map( (item, index) => (
-                  <ReviewCard key={index} item={item} />
-                )) 
-              }
+                    items.map((item, index) => (
+                      <SwiperSlide key={index} className='swiperslide'>
+                        <ReviewCard key={index} item={item} />
+                      </SwiperSlide>
+                    ))
+                  }               
+              </Swiper>
+ 
             </div>
           </div>
         </Container>
