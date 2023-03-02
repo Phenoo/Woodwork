@@ -1,11 +1,21 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import ShopLayout from '../../../components/Shop/Shop'
 import { sanityClient } from '../../../utils/client'
 import groq from 'groq'
+import {useRouter} from 'next/router'
 
+const CategoryPage = ({categories}) => {
+  const router = useRouter();
+  const {slug} = router.query;
+  const [posts, setPosts] = useState([])
 
-const CategoryPage = ({posts, categories}) => {
-  console.log(posts)
+  useEffect(() => {
+    const query = `*[_type == "post" && tag == "${slug}"]`
+    sanityClient.fetch(query).then((data) => {
+      setPosts(data)
+    })
+  }, [slug])
+
 
   return (
     <ShopLayout  posts={posts} categories={categories} />
@@ -14,41 +24,37 @@ const CategoryPage = ({posts, categories}) => {
 
 export default CategoryPage
 
+
 export async function getStaticPaths() {
-  const paths = await sanityClient.fetch(
-    `*[_type == "category" && defined(slug.current)][].slug.current`
-  )
+  const query = `*[_type == "category"]{
+    slug{
+      current
+    }
+  }`;
+  const categories = await sanityClient.fetch(query);
+
+  const paths = categories.map((category) => ({
+    params: {
+      slug: category.slug.current
+    }
+  }));
 
   return {
-    paths: paths.map((slug) => ({params: {slug}})),
-    fallback: true,
+    paths,
+    fallback: 'blocking',
   }
 }
 
-export async function getStaticProps(context) {
-  const { slug } = context.params
-  const query = `*[_type == "post" && category._ref in *[_type=="category" && slug=="${slug}"] ]{
-    _id,
-    title,
-    slug,
-    mainImage,
-    stock,
-    price,
-    categories
-  
-  }`;
-  
-  const posts = await sanityClient.fetch(query);
-
+export async function getStaticProps() {
   const categories = await sanityClient.fetch(groq`
-    *[_type == "category"]{
-      title,
-      slug
-    }
-  `)
+  *[_type == "category"]{
+    title,
+    slug
+  }
+`)
+
   return {
     props: {
-      posts,
       categories
     }
   }

@@ -4,7 +4,6 @@ import Tophead from '../../components/Tophead'
 import groq from 'groq'
 import ShopContainer from '../../components/Shop'
 import { sanityClient } from '../../utils/client'
-import Link from 'next/link'
 
 import cn from 'clsx'
 import ShopLayout from '../../components/Shop/Shop'

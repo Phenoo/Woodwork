@@ -7,6 +7,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    overflow-x: hidden;
 }
 
 body {
@@ -55,6 +56,27 @@ button {
 button:hover {
     transform: scale(0.95);
     transition: all 0.3s ease-in-out;
+}
+
+.scrollup {
+    width: 2.75rem;
+    height: 2.75rem;
+    right: 1rem;
+    bottom: 1.5rem;
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    z-index: 100;
+}
+
+.fixedxx {
+    position: fixed
 }
 
 @media (prefers-color-scheme: dark) {

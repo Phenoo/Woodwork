@@ -14,12 +14,12 @@ const SinglePage = ({post}) => {
     <Container>
       <div className='my-20 '>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
-          <div>
+          <div className='max-w-lg w-full h-[400px]'>
             <Image 
               src={urlFor(mainImage).url()}
               alt={title}
               width={400}
-              height={400}
+              height={350}
               />
           </div>
           <div>
@@ -44,6 +44,7 @@ const SinglePage = ({post}) => {
 
             <p className='my-4'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nihil nam quam sequi porro repellendus enim optio quia odio ut, deleniti quas adipisci sapiente quo explicabo quod voluptates natus excepturi.
+              lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nihil nam quam sequi porro repellendus enim optio quia odio ut, deleniti quas adipisci sapiente quo explicabo quod voluptates natus excepturi.
             </p>
             <div className='my-6 w-full mx-12'>
               <ul className='list-disc'>
@@ -127,35 +128,3 @@ export async function getStaticProps({params}) {
     }
   }
 }
-// export async function getStaticPaths() {
-  
-
-//   const post = await sanityClient.fetch(query);
-
-//   const paths = post.map((item) => ({
-//     params: {
-//       slug: item.slug.current
-//     }
-//   })); 
-
-//   return {
-//     paths,
-//     fallback: "blocking",
-//   }
-// }
-
-// export async function getStaticProps({params}) {
-//   const query = `*[_type == "post" && {
-
-//   }`
-
-//   const post = await sanityClient.fetch(query, {
-//     slug: params.slug
-//   });
-//   return{
-//     props: {
-//       post
-//     },
-//     revalidate: 60,
-//   }
-// }

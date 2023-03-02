@@ -9,33 +9,16 @@ import ProductCard from "./ProductCard"
 import Link from "next/link"
 
 
-const Featured = () => {
-  const data = [
-    {
-      image: Img1,
-      name: "Wooden Cushion",
-    },
-    {
-      image: Img2,
-      name: "Wooden Cushion",
-    },
-    {
-      image: Img3,
-      name: "Wooden Cushion",
-    },
-    {
-      image: Img4,
-      name: "Wooden Cushion",
-    }
-  ]
+const Featured = ({postsThree}) => {
+
   return(
       <div className="my-16">
         <Tophead title="Featured Collections" align='text-center' />
         <div className="my-4 border-y border-black flex flex-col justify-center items-center">
           <div className="grid grid-cols-4">
             {
-              data.map((item, index) => (
-                <ProductCard key={index} item={item} />
+              postsThree.map((item) => (
+                <ProductCard key={item._id} item={item} />
               ))
             }
           </div>

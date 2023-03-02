@@ -1,5 +1,7 @@
 import React from 'react'
 import Bag from '../components/icons/Bag'
+
+
 const Cart = () => {
   return (
     <div className='mx-auto max-w-7xl px-6 w-full grid lg:grid-cols-12 pt-4 gap-20'>
