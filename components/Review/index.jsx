@@ -68,7 +68,6 @@ const Review = () => {
                   Average
                 </h6>
             </div>
-            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4'>
 
                <Swiper
                     slidesPerView={"auto"}
@@ -88,7 +87,6 @@ const Review = () => {
                   }               
               </Swiper>
  
-            </div>
           </div>
         </Container>
       </div>
