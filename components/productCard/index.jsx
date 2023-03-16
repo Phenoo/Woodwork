@@ -3,9 +3,13 @@ import { urlFor } from "../../utils/client";
 
 import Link from 'next/link'
 import { useState } from "react";
+import { useStateContext } from "../../context/StateContext";
+
+
 
 const ProductCard = ({item}) => {
   const [show, setShow] = useState(false)
+  const {addToCart, qty, removeBtn} = useStateContext()
   const scrollTo = (id) => {
     let element = document.getElementById(id);
     element.scrollIntoView({
@@ -19,9 +23,13 @@ const ProductCard = ({item}) => {
   return(
     <div className="w-[300px] md:w-[260px] h-[350px] flex justify-between flex-col border-l-2 border-black px-2 cursor-pointer animated fadeIn" key={_id}>
           <div className="relative h-[280px] p-1" onMouseOver={() => setShow(true)} onMouseOut={() => setShow(false)}>
-            {show ? <div className="absolute h-full w-full bg-gray-500/75 transition-all duration-150 ease-out hover:ease-in">
+            {show ? 
+            <div className="absolute h-full w-full bg-gray-500/75 transition-all duration-150 ease-out hover:ease-in">
               <div className="flex items-center justify-center  gap-4 h-full w-full">
-                <button className="px-2 py-3 text-[12px] rounded-full bg-white text-black capitalize">add to cart</button>
+                <button className="px-2 py-3 text-[12px] rounded-full bg-white text-black capitalize"
+                  onClick={() => addToCart(item, qty)}
+                >
+                  add to cart</button>
                 <button className="px-2 py-3 text-[12px] rounded-full bg-black text-white capitalize">
                   <Link href={"/product/" +  slug.current} onClick={() => scrollTo('nav')}>
                     view item
@@ -40,7 +48,7 @@ const ProductCard = ({item}) => {
               height={280}
             />
         }
-        </div>
+         </div>
 
       <h5 className='text-xl'>
       {title}
@@ -53,7 +61,7 @@ const ProductCard = ({item}) => {
         </div>
         <div>
           <h6 className="font-bold">
-            ${price}
+            ${price.toLocaleString()}
           </h6>
         </div>
       </div>

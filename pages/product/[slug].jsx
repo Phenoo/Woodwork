@@ -5,9 +5,11 @@ import Image from 'next/image'
 
 import { FaStar, FaHeart } from 'react-icons/fa'
 import { AiOutlineHeart } from 'react-icons/ai'
+import { useStateContext } from '../../context/StateContext'
 
 const SinglePage = ({post}) => {
   const [clicked, setClicked] = useState(false)
+  const { addToCart, qty } = useStateContext()
   const {title, price, stock, mainImage, slug, _id} = post;
 
   return (
@@ -61,7 +63,9 @@ const SinglePage = ({post}) => {
                 <h6 className='font-bold'>${price}</h6>
               </div>
             <div className='flex flex-row items-center gap-6 mt-6'>
-              <button className='flex flex-row items-center gap-4 capitalize  bg-black text-white px-4 py-2 rounded-full' >
+              <button className='flex flex-row items-center gap-4 capitalize  bg-black text-white px-4 py-2 rounded-full' 
+                onClick={() => addToCart(post, qty)}
+              >
                 <span>
                   add to cart
                 </span>

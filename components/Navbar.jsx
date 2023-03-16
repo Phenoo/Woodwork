@@ -13,7 +13,7 @@ import Cross from './icons/Cross'
 import UserNav from './userNav'
 
 const Navbar = () => {
-  const { showCart, setShowCart } = useStateContext();
+  const { showCart, setShowCart, totalQuantities } = useStateContext();
   const [mobile, setMobile] =  useState(false)
   return (
     <Container >
@@ -56,7 +56,7 @@ const Navbar = () => {
                   cart           
                 </span>
                 <span className='rounded-full border border-black flex items-center justify-center px-2 py-1'>
-                  0
+                  {totalQuantities}
                 </span>
               </button>
             </div>
