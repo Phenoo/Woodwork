@@ -61,12 +61,13 @@ const Blogs = () => {
                 </button>
               </div>
               <div className='hidden md:flex border-l-2 h-full border-black' />
-              <div className=' md:py-8 w-[300px] h-[300px] order-1'>
+              <div className=' md:py-8 w-[300px] h-[400px] order-1'>
                 <Image 
-                  src={Img1}
-                  width={500}
-                  objectfit='contain'
+                  src='https://source.unsplash.com/IH7wPsjwomc'
+                  width={400}
+                  height={500}
                   alt='blog image'
+                  // className='object-contain'
                   />
               </div>
             </div>
@@ -74,13 +75,16 @@ const Blogs = () => {
         </div>
         <div className='py-8 mt-8 border-b border-black'>
           <Tophead title='enjoy our articles' align='text-center'/>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 place-items-center mt-12">
-                {
-                  data.map((item, index) => (
-                    <BlogCard key={index} item={item} />
-                  ))
-                }
+          <div className='max-w-7xl mx-auto'>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 mt-12">
+                  {
+                    data.map((item, index) => (
+                      <BlogCard key={index} item={item} />
+                    ))
+                  }
+            </div>
           </div>
+
         </div>
       </div>
     </div>

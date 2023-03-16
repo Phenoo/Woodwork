@@ -11,10 +11,10 @@ const About = () => {
   return (
     <div>
       <Container>
-        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-16">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-20">
           <div>
             <h2 className={`text-2xl md:text-4xl font-bold uppercase md:mx-[100px]`}>
-              furniture e-commerce that brand your style.
+              furniture e-commerce that brand your style .
             </h2>
           </div>
           <div>
@@ -24,12 +24,12 @@ const About = () => {
           </div>
         </div>
         <div className='grid lg:grid-cols-2 gap-4 place-items-center w-full my-12 py-12'>
-          <div className='w-full'>
+          <div className='w-full h-full'>
             <Image
               src='https://source.unsplash.com/HaTQS_KI-1o'
               alt='about'
               width={400}
-              height={300}
+              height={400}
             />
           </div>
           <div className='w-full'>

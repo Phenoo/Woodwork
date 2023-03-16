@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Itim&family=Montserrat&family=Oswald&family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Itim&family=Work+Sans&family=Montserrat&family=Oswald&family=Cabin&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -12,6 +12,7 @@ body {
 
 body {
     background: #a58d72;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -32,7 +33,7 @@ h2 {
 a,
 li,
 button {
-    font-family: 'Itim', sans-serif;
+    font-family: 'Work Sans', sans-serif;
 }
 
 p {
@@ -57,6 +58,8 @@ button:hover {
     transform: scale(0.95);
     transition: all 0.3s ease-in-out;
 }
+
+
 
 .scrollup {
     width: 2.75rem;

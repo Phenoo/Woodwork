@@ -15,7 +15,9 @@ const ShopLayout = ({posts, categories}) => {
   const [toggleFilter, setToggleFilter] = useState(false)  
   const [activeFilterx, setActiveFilterx] = useState('')
   const [toggleFilterx, setToggleFilterx] = useState(false)
-  const [activeBtn, setActiveBtn] = useState()
+  const [activeBtn, setActiveBtn] = useState();
+  const [categoryvalue, setCategoryvalue] = useState('Categories')
+  const [relvalue, setRelvalue] = useState('Relevance')
 
   console.log()
 
@@ -79,12 +81,12 @@ const ShopLayout = ({posts, categories}) => {
                 <button
                   type="button"
                   onClick={(e) => handleClick(e, 'sort')}
-                  className="flex justify-between w-full rounded-sm border border-accent-3 px-4 py-3 bg-accent-0 text-sm leading-5 font-medium text-accent-4 hover:text-accent-5 focus:outline-none focus:border-blue-300 focus:shadow-outline-normal active:bg-accent-1 active:text-accent-8 transition ease-in-out duration-150"
+                  className="flex justify-between w-full rounded-sm border capitalize border-accent-3 px-4 py-3 bg-accent-0 text-sm leading-5 font-medium text-accent-4 hover:text-accent-5 focus:outline-none focus:border-blue-300 focus:shadow-outline-normal active:bg-accent-1 active:text-accent-8 transition ease-in-out duration-150"
                   id="options-menu"
                   aria-haspopup="true"
                   aria-expanded="true"
                 >
-                  Categories
+                  {categoryvalue}
                   {/* {sort ? SORT[sort as keyof typeof SORT] : 'Relevance'} */}
                   <svg
                     className="-mr-1 ml-2 h-5 w-5"
@@ -101,6 +103,10 @@ const ShopLayout = ({posts, categories}) => {
                 </button>
               </span>
             </div>
+
+
+
+            
           <div className={`origin-top-left absolute bg-white lg:relative left-0 mt-2 w-full rounded-md shadow-lg lg:shadow-none z-10 mb-10 lg:block ${
     	      activeFilter !== 'sort' || toggleFilter !== true ? 'hidden' : ''}`}>
             <div className="rounded-sm bg-accent-0 shadow-xs lg:bg-none lg:shadow-none">
@@ -118,7 +124,6 @@ const ShopLayout = ({posts, categories}) => {
                       }
                     )}
                   >
-                    <Link href='/shop'>
                       <button
                         onClick={(e) => handleClick(e, 'sort')}
                         className={
@@ -127,20 +132,46 @@ const ShopLayout = ({posts, categories}) => {
                       >
                         Categories
                       </button>
-                    </Link>
                   </li>
+                  <li>
+                  </li>
+                  <li className='block text-sm leading-5 text-accent-4  hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8'
+                      onClick={(e) => handleClick(e, 'sort')}
+                    
+                    >
+                    <button className={`block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4 capitalize ${activeBtn === 'all' ? "underline" : ""}`}
+                      onClick={() => {
+                        setActiveBtn('all')
+                        setCategoryvalue('all categories')
+
+                      }}
+                    >
+                      <Link href='/shop'>
+                        all categories
+                      </Link>
+                    </button>
+                  </li>
+
                   {categories && categories.map((category, index) => (
+                    
                     <li
+
                       key={index}
+                      onClick={(e) => handleClick(e, 'sort')}
+
                       className={cn(
-                        'block text-sm leading-5 text-accent-4 hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
+                        'block text-sm leading-5 text-accent-4  hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
                         {
                           underline: activeFilter === index,
                         }
                       )}
                     >
                       <button
-                        onClick={(e) => setActiveBtn(index)}
+                        onClick={(e) => {
+                          setActiveBtn(index)
+                          setCategoryvalue(category.title)
+                        
+                        }}
                           className={
                             `block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4 capitalize ${activeBtn === index ? "underline" : ""}`
                           }
@@ -171,13 +202,15 @@ const ShopLayout = ({posts, categories}) => {
               <span className="rounded-md shadow-sm">
                 <button
                   type="button"
-                  onClick={(e) => handleClickx(e, 'sort')}
+                  onClick={(e) => {
+                    handleClickx(e, 'sort')
+                }}
                   className="flex justify-between w-full rounded-sm border border-accent-3 px-4 py-3 bg-accent-0 text-sm leading-5 font-medium text-accent-4 hover:text-accent-5 focus:outline-none focus:border-blue-300 focus:shadow-outline-normal active:bg-accent-1 active:text-accent-8 transition ease-in-out duration-150"
                   id="options-menu"
                   aria-haspopup="true"
                   aria-expanded="true"
                 >
-                  Relevance
+                  {relvalue}
                   <svg
                     className="-mr-1 ml-2 h-5 w-5"
                     xmlns="http://www.w3.org/2000/svg"
@@ -193,6 +226,8 @@ const ShopLayout = ({posts, categories}) => {
                 </button>
               </span>
             </div>
+
+
             <div
               className={`origin-top-left absolute lg:relative left-0 mt-2 w-full rounded-md shadow-lg lg:shadow-none z-10 mb-10 lg:block ${
                 activeFilterx !== 'sort' || toggleFilterx !== true ? 'hidden' : ''
@@ -224,7 +259,9 @@ const ShopLayout = ({posts, categories}) => {
                     {SORT.map((item, index) => (
                         <li
                         key={index}
-                        onClick={(e) => handleClickx(e, 'sort')}
+                        onClick={(e) => {
+                          handleClickx(e, 'sort')
+                        }}
                         className={cn(
                           'block text-sm leading-5 text-accent-4 hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
                         )}
@@ -235,7 +272,10 @@ const ShopLayout = ({posts, categories}) => {
                               `block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4 cursor-pointer ${activeBtn === index ? "underline" : ""}`
                             }
                           >
-                            <a onClick={() => setActiveBtn(index)}>
+                            <a onClick={() => {
+                              setActiveBtn(index)
+                              setRelvalue(item.text)
+                            }}>
                             {item.text}
                             </a>
                           </button>

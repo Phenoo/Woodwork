@@ -6,8 +6,8 @@ const ShopContainer = ({posts}) => {
     <>
       {
         posts.length <= 0 ? 
-        <div className="flex-1 px-4 flex flex-col justify-center items-center">
-          <h4 className='text-center text-2xl '>Nothing on this page...</h4>
+        <div className="flex-1 px-4 flex flex-col justify-center items-center mt-8">
+          <h4 className='text-center text-2xl '>Loading on this page...</h4>
         </div>
          : ''
       }

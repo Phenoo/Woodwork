@@ -2,6 +2,7 @@ import Container from '../Container'
 import { useEffect, useState } from 'react';
 
 import s from '../hero/Hero.module.css'
+import KitchenCanvas from '../Canvas/Kitchen';
 
 
 function getWindowDimensions() {
@@ -45,22 +46,25 @@ const Hero = () => {
 
     return (
       <Container>
-        <div className='my-16 h-[700px] '>
-        <div className='flex justify-between flex-row'>
-          <div>
-            <h2 className='text-5xl font-bold uppercase'>
-              stylish furniture
-            </h2>
+        <div className='my-20 h-screen '>
+          <div className='flex justify-between flex-row'>
+            <div>
+              <h2 className='text-2xl md:text-5xl font-bold uppercase'>
+                stylish furniture
+              </h2>
+            </div>
+            <div className=''>
+              <button className='rounded-xl border-black border py-1 px-2'>
+                wood
+              </button>
+              <p className='font-bold text-md'>
+                your best bet.
+              </p>
+            </div>
           </div>
-          <div className=''>
-            <button className='rounded-xl border-black border py-1 px-2'>
-              wood
-            </button>
-            <p className='font-bold text-md'>
-              your best bet.
-            </p>
-          </div>
-          </div>
+          {/* <div className='h-screen bg-[#ddd]'>
+          <KitchenCanvas />
+        </div> */}
           <div className='w-full flex justify-center items-center'>
             <div className={s.backImg} />
           </div>

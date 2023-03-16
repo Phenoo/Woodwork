@@ -5,7 +5,7 @@ import Container from '../Container'
 
 const AboutText = () => {
   return (
-    <div className="bg-[#4e3e2c] p-4 md:p-12">
+    <div className="bg-[#948575] p-4 md:p-12">
       <Container>
         <Container>
           <h6 className={`text-xl md:text-3xl py-12 md:w-[700px]`}>

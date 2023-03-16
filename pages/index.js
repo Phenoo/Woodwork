@@ -10,6 +10,7 @@ import ArticleSection from '../components/ArticleSection'
 import Review from '../components/Review'
 
 import { sanityClient } from './../utils/client'
+import KitchenCanvas from '../components/Canvas/Kitchen'
 
 export default function Home({posts}) {
   const postsThree = posts.filter((item, index) => index < 4)
@@ -26,6 +27,9 @@ export default function Home({posts}) {
         <Brands />
         <NewArrivals postsThree={postsThree}  />
         <Collections  />
+        {/* <div className=' h-60 bg-[#ddd]'>
+          <KitchenCanvas />
+        </div> */}
         <Review />
         <ArticleSection />
       </main>

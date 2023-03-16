@@ -9,6 +9,7 @@ import s from './Social.module.css'
 
 
 import Img1 from '../../public/assets/saw.png'
+import { FaYinYang } from 'react-icons/fa';
 
 const Footer = () => {
   const info = ["Our story", "faq", "returns", "terms of service", "privacy policy"];
@@ -54,17 +55,12 @@ const Footer = () => {
               </ul>
             </div>
             <Social />
-            <div className={s.saw}>
-              <Image
-                src={Img1}
-                alt='footer-image'
-                width={40}
-                height={40}
-              />
+            <div>
+              <FaYinYang className='animate-spin' size={50} />
             </div>
           </div>
         </div>
-        <div className='border-t-2 border-black py-3 mt-8 flex flex-col justify-center md:flex-row md:justify-between'>
+        <div className='border-t-2 border-black py-3 mt-8 flex text-center flex-col justify-center md:flex-row md:justify-between'>
           <div>
             <p>
               &copy; 2020 furniture, Inc. All rights reserved.

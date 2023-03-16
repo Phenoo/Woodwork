@@ -6,7 +6,6 @@ export const client = {
     dataset: process.env.NEXT_PUBLIC_SANITY_DATASET, // or the name you chose in step 1
     apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION,
     useCdn: true,
-    token: process.env.NEXT_PUBLIC_SANITY_TOKEN,
 }
 
 export const sanityClient = createClient(client);
