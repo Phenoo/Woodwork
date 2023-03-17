@@ -9,7 +9,7 @@ import { useStateContext } from "../../context/StateContext";
 
 const ProductCard = ({item}) => {
   const [show, setShow] = useState(false)
-  const {addToCart, qty, removeBtn} = useStateContext()
+  const {addToCart, qty} = useStateContext()
   const scrollTo = (id) => {
     let element = document.getElementById(id);
     element.scrollIntoView({

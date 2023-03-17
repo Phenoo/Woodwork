@@ -19,8 +19,6 @@ const ShopLayout = ({posts, categories}) => {
   const [categoryvalue, setCategoryvalue] = useState('Categories')
   const [relvalue, setRelvalue] = useState('Relevance')
 
-  console.log()
-
   
   const handleClick = (e, filter) => {
     if (filter !== activeFilter) {
@@ -76,6 +74,8 @@ const ShopLayout = ({posts, categories}) => {
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-4 mt-3 mb-20"'>
         <div className="col-span-8 lg:col-span-2 order-1 lg:order-none">
           <div className="relative inline-block w-full">
+
+            
           <div className="lg:hidden">
               <span className="rounded-md shadow-sm">
                 <button
@@ -107,7 +107,7 @@ const ShopLayout = ({posts, categories}) => {
 
 
             
-          <div className={`origin-top-left absolute bg-white lg:relative left-0 mt-2 w-full rounded-md shadow-lg lg:shadow-none z-10 mb-10 lg:block ${
+          <div className={`origin-top-left absolute bg-primary lg:relative left-0 mt-2 w-full rounded-md shadow-lg lg:shadow-none z-10 mb-10 lg:block ${
     	      activeFilter !== 'sort' || toggleFilter !== true ? 'hidden' : ''}`}>
             <div className="rounded-sm bg-accent-0 shadow-xs lg:bg-none lg:shadow-none">
               <div
@@ -239,7 +239,7 @@ const ShopLayout = ({posts, categories}) => {
                   aria-orientation="vertical"
                   aria-labelledby="options-menu"
                 >
-                  <ul className='bg-white'>
+                  <ul className='bg-primary'>
                     <li
                       className={cn(
                         'block text-sm leading-5 text-accent-4 lg:text-base lg:no-underline lg:font-bold lg:tracking-wide hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',

@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Itim&family=Work+Sans&family=Montserrat&family=Oswald&family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=family=Anton&family=Itim&family=Work+Sans&family=Montserrat&family=Oswald&family=Cabin&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @layer utilities{
+    .accent-0{
+
+    }
+} */
+
 html,
 body {
     padding: 0;
@@ -11,7 +18,6 @@ body {
 }
 
 body {
-    background: #a58d72;
     scroll-behavior: smooth;
 }
 
@@ -59,24 +65,10 @@ button:hover {
     transition: all 0.3s ease-in-out;
 }
 
-
-
-.scrollup {
-    width: 2.75rem;
-    height: 2.75rem;
-    right: 1rem;
-    bottom: 1.5rem;
-    background-color: #111;
-    color: #fff;
-    border: 1px solid #fff;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    justify-content: center;
-    border-radius: 50%;
-    transition: all 0.2s ease;
-    z-index: 100;
+.logo{
+    font-family: 'Kanit', sans-serif;
 }
+
 
 .reSwiper{
     height: 300px;

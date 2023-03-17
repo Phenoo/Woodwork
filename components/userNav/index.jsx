@@ -12,7 +12,7 @@ import { FaYinYang} from 'react-icons/fa'
 const UserNav = ({setMobile}) => {
   return (
     <Sidebar>
-      <div className='fixed h-screen w-full bg-white inset-0'>
+      <div className='fixed h-screen w-full bg-primary  inset-0'>
         <div className={cn(s.root)}>
           <header className={s.header}>
             <button
@@ -29,16 +29,16 @@ const UserNav = ({setMobile}) => {
           </header>
           <div className={s.container}>
             <nav className='flex flex-col gap-6 p-6  px-10 mt-8'>
-                <Link href='/'  className='capitalize text-xl' onClick={() => setMobile(false)}> 
+                <Link href='/'  className='capitalize text-xl text-primary' onClick={() => setMobile(false)}> 
                   home
                 </Link>
-                <Link href='/about' className='capitalize text-xl' onClick={() => setMobile(false)}>
+                <Link href='/about' className='capitalize text-xl text-primary' onClick={() => setMobile(false)}>
                   about
                 </Link>
-                <Link href='/shop'  className='capitalize text-xl' onClick={() => setMobile(false)}> 
+                <Link href='/shop'  className='capitalize text-xl text-primary' onClick={() => setMobile(false)}> 
                   shop
                 </Link>
-                <Link href='/blog' className='capitalize text-xl' onClick={() => setMobile(false)}>
+                <Link href='/blog' className='capitalize text-xl text-primary' onClick={() => setMobile(false)}>
                   blogs
                 </Link>
 

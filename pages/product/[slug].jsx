@@ -63,14 +63,14 @@ const SinglePage = ({post}) => {
                 <h6 className='font-bold'>${price}</h6>
               </div>
             <div className='flex flex-row items-center gap-6 mt-6'>
-              <button className='flex flex-row items-center gap-4 capitalize  bg-black text-white px-4 py-2 rounded-full' 
+              <button className='flex flex-row items-center gap-4 capitalize  bg-secondary text-secondary px-4 py-2 rounded-full' 
                 onClick={() => addToCart(post, qty)}
               >
                 <span>
                   add to cart
                 </span>
               </button>
-              <button className='flex flex-row items-center gap-4 capitalize rounded-full border-2 border-black px-4 py-2' onClick={() => setClicked(!clicked)}>
+              <button className='flex flex-row items-center gap-4 capitalize rounded-full border-2 border-secondary px-4 py-2' onClick={() => setClicked(!clicked)}>
                 <span>
                   {
                     clicked ? 'wishlisted' :  'wishlist'

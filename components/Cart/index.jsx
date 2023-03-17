@@ -9,6 +9,7 @@ import { urlFor } from '../../utils/client'
 import Cross from '../icons/Cross'
 import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { useCart } from 'react-use-cart'
+import Link from 'next/link'
 
 const Cart = () => {
   const {cartItems, totalQuantities, totalPrice, removeBtn, incrementQuantity, toggleCartItemQuanitity} =  useStateContext();
@@ -125,11 +126,11 @@ const Cart = () => {
               <span className="border border-dashed border-primary rounded-full flex items-center justify-center w-16 h-16 p-12 bg-secondary text-secondary">
                 <Bag className="absolute" />
               </span>
-              <h2 className="pt-6 text-2xl font-bold tracking-wide text-center">
+              <h2 className="pt-6 text-2xl font-bold tracking-wide text-cente text-primary">
                 Your cart is empty
               </h2>
-              <p className="text-accent-3 px-10 text-center pt-2">
-                Biscuit oat cake wafer icing ice cream tiramisu pudding cupcake.
+              <p className="text-primary px-10 text-center pt-2 capitalize">
+                Check out our <Link href='/'>products</Link>
               </p>
             </div>
             

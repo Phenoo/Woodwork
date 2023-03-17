@@ -46,9 +46,9 @@ const Blogs = () => {
         </p>
       </div>
       <div className="my-16">
-        <div className='mt-8 border-y border-black'>
+        <div className='mt-8 border-y border-secondary'>
           <Container>
-            <div className='grid grid-cols-1 lg:grid-cols-3 place-items-center px-4 md:px-16'>
+            <div className='grid grid-cols-1 lg:grid-cols-3 place-items-center px-4 md:px-16 h-auto'>
               <div className='py-4 md:py-8 my-4 md:my-12'>
                 <h4 className='font-bold capitalize text-3xl md:text-4xl'>
                   wooden cushion: auto-generated future template
@@ -56,24 +56,24 @@ const Blogs = () => {
                 <p className='my-6'>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nihil nam quam sequi porro repellendus enim optio quia odio ut, deleniti quas adipisci sapiente quo explicabo quod voluptates natus excepturi.
                 </p>
-                <button className='font-bold text-md uppercase mt-2 border border-black p-1 px-2'>
+                <button className='font-bold text-md uppercase mt-2 border border-secondary p-1 px-2'>
                   read article
                 </button>
               </div>
-              <div className='hidden md:flex border-l-2 h-full border-black' />
+              <div className='hidden md:flex border-l-2 h-full border-secondary' />
               <div className=' md:py-8 w-[300px] h-[400px] order-1'>
                 <Image 
                   src='https://source.unsplash.com/IH7wPsjwomc'
                   width={400}
-                  height={500}
+                  height={400}
                   alt='blog image'
-                  // className='object-contain'
+                  className='object-contain'
                   />
               </div>
             </div>
           </Container>
         </div>
-        <div className='py-8 mt-8 border-b border-black'>
+        <div className='py-8 mt-8 border-b border-secondary'>
           <Tophead title='enjoy our articles' align='text-center'/>
           <div className='max-w-7xl mx-auto'>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 mt-12">
