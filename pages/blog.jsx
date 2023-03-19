@@ -9,6 +9,7 @@ import Img3 from '../public/assets/blogcard3.jpeg'
 import Img4 from '../public/assets/blogcard.jpeg'
 import Image from 'next/image'
 import Container from '../components/Container'
+import Head from 'next/head'
 
 const Blogs = () => {
   const data = [
@@ -39,6 +40,9 @@ const Blogs = () => {
   ]
   return (
     <div>
+      <Head>
+        <title>Blogs</title>
+      </Head>
       <div className="my-16 py-10">
         <Tophead title='our blog posts' align='text-center'/>
         <p className="text-center">
@@ -50,7 +54,7 @@ const Blogs = () => {
           <Container>
             <div className='grid grid-cols-1 lg:grid-cols-3 place-items-center px-4 md:px-16 h-auto'>
               <div className='py-4 md:py-8 my-4 md:my-12'>
-                <h4 className='font-bold capitalize text-3xl md:text-4xl'>
+                <h4 className='font-bold capitalize text-2xl md:text-3xl lg:text-4xl'>
                   wooden cushion: auto-generated future template
                 </h4>
                 <p className='my-6'>
@@ -75,15 +79,16 @@ const Blogs = () => {
         </div>
         <div className='py-8 mt-8 border-b border-secondary'>
           <Tophead title='enjoy our articles' align='text-center'/>
-          <div className='max-w-7xl mx-auto'>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-6 mt-12">
+          <Container>
+
+            <div className="flex flex-wrap gap-6 justify-center mt-12">
                   {
                     data.map((item, index) => (
                       <BlogCard key={index} item={item} />
                     ))
                   }
             </div>
-          </div>
+          </Container>
 
         </div>
       </div>

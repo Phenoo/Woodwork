@@ -3,6 +3,7 @@ import ShopLayout from '../../../components/Shop/Shop'
 import { sanityClient } from '../../../utils/client'
 import groq from 'groq'
 import {useRouter} from 'next/router'
+import Head from 'next/head'
 
 const CategoryPage = ({categories}) => {
   const router = useRouter();
@@ -18,7 +19,12 @@ const CategoryPage = ({categories}) => {
 
 
   return (
-    <ShopLayout  posts={posts} categories={categories} />
+    <>
+      <Head>
+        <title>{slug} Category</title>
+      </Head>
+      <ShopLayout  posts={posts} categories={categories} />
+    </>
   )
 }
 

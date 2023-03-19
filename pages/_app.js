@@ -1,5 +1,6 @@
 import RootLayout from '../components/layout'
 import '../styles/main.css'
+import '../styles/globals.css'
 import {StateContext} from '../context/StateContext'
 
 function MyApp({ Component, pageProps }) {

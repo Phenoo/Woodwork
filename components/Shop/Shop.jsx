@@ -81,7 +81,7 @@ const ShopLayout = ({posts, categories}) => {
                 <button
                   type="button"
                   onClick={(e) => handleClick(e, 'sort')}
-                  className="flex justify-between w-full rounded-sm border capitalize border-accent-3 px-4 py-3 bg-accent-0 text-sm leading-5 font-medium text-accent-4 hover:text-accent-5 focus:outline-none focus:border-blue-300 focus:shadow-outline-normal active:bg-accent-1 active:text-accent-8 transition ease-in-out duration-150"
+                  className="flex justify-between w-full rounded-sm border capitalize border-secondary px-4 py-3 bg-accent-0 text-sm leading-5 font-medium text-primary hover:text-accent-5 focus:outline-none focus:border-blue-300 focus:shadow-outline-normal active:bg-accent-1 active:text-accent-8 transition ease-in-out duration-150"
                   id="options-menu"
                   aria-haspopup="true"
                   aria-expanded="true"
@@ -139,7 +139,7 @@ const ShopLayout = ({posts, categories}) => {
                       onClick={(e) => handleClick(e, 'sort')}
                     
                     >
-                    <button className={`block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4 capitalize ${activeBtn === 'all' ? "underline" : ""}`}
+                    <button className={`block text-primary lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4 capitalize ${activeBtn === 'all' ? "underline" : ""}`}
                       onClick={() => {
                         setActiveBtn('all')
                         setCategoryvalue('all categories')
@@ -160,7 +160,7 @@ const ShopLayout = ({posts, categories}) => {
                       onClick={(e) => handleClick(e, 'sort')}
 
                       className={cn(
-                        'block text-sm leading-5 text-accent-4  hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
+                        'block text-sm leading-5 text-primary  hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
                         {
                           underline: activeFilter === index,
                         }
@@ -173,7 +173,7 @@ const ShopLayout = ({posts, categories}) => {
                         
                         }}
                           className={
-                            `block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4 capitalize ${activeBtn === index ? "underline" : ""}`
+                            `block lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4 capitalize ${activeBtn === index ? "underline text-secondary-2" : ""}`
                           }
                       >
                         <Link
@@ -205,7 +205,7 @@ const ShopLayout = ({posts, categories}) => {
                   onClick={(e) => {
                     handleClickx(e, 'sort')
                 }}
-                  className="flex justify-between w-full rounded-sm border border-accent-3 px-4 py-3 bg-accent-0 text-sm leading-5 font-medium text-accent-4 hover:text-accent-5 focus:outline-none focus:border-blue-300 focus:shadow-outline-normal active:bg-accent-1 active:text-accent-8 transition ease-in-out duration-150"
+                  className="flex justify-between w-full rounded-sm border border-secondary px-4 py-3 bg-accent-0 text-primary text-sm leading-5 font-medium  hover:text-accent-5 focus:outline-none focus:border-blue-300 focus:shadow-outline-normal active:bg-accent-1 active:text-accent-8 transition ease-in-out duration-150"
                   id="options-menu"
                   aria-haspopup="true"
                   aria-expanded="true"
@@ -242,7 +242,7 @@ const ShopLayout = ({posts, categories}) => {
                   <ul className='bg-primary'>
                     <li
                       className={cn(
-                        'block text-sm leading-5 text-accent-4 lg:text-base lg:no-underline lg:font-bold lg:tracking-wide hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
+                        'block text-sm leading-5 text-primary lg:text-base lg:no-underline lg:font-bold lg:tracking-wide hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
                         {
                         }
                       )}
@@ -263,7 +263,7 @@ const ShopLayout = ({posts, categories}) => {
                           handleClickx(e, 'sort')
                         }}
                         className={cn(
-                          'block text-sm leading-5 text-accent-4 hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
+                          'block text-sm leading-5 text-primary hover:bg-accent-1 lg:hover:bg-transparent hover:text-accent-8 focus:outline-none focus:bg-accent-1 focus:text-accent-8',
                         )}
                       >
                           <button

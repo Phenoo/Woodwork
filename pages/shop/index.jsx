@@ -1,19 +1,21 @@
 import React, { useState } from 'react'
-import Container from '../../components/Container'
-import Tophead from '../../components/Tophead'
 import groq from 'groq'
-import ShopContainer from '../../components/Shop'
 import { sanityClient } from '../../utils/client'
 
-import cn from 'clsx'
 import ShopLayout from '../../components/Shop/Shop'
+import Head from 'next/head'
 
 const Shop = ({posts, categories}) => {
 
   
   
   return (
-    <ShopLayout posts={posts} categories={categories} />
+    <>
+      <Head>
+        <title>Shop</title>
+      </Head>
+      <ShopLayout posts={posts} categories={categories} />
+    </>
   )
 }
 

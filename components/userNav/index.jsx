@@ -41,6 +41,9 @@ const UserNav = ({setMobile}) => {
                 <Link href='/blog' className='capitalize text-xl text-primary' onClick={() => setMobile(false)}>
                   blogs
                 </Link>
+                <Link href='/wishlist' className='capitalize text-xl text-primary' onClick={() => setMobile(false)}>
+                  wishlist
+                </Link>
 
             </nav>
           </div>

@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { FaStar, FaHeart } from 'react-icons/fa'
 import { AiOutlineHeart } from 'react-icons/ai'
 import { useStateContext } from '../../context/StateContext'
+import Head from 'next/head'
 
 const SinglePage = ({post}) => {
   const [clicked, setClicked] = useState(false)
@@ -14,6 +15,9 @@ const SinglePage = ({post}) => {
 
   return (
     <Container>
+      <Head>
+        <title>{title}</title>
+      </Head>
       <div className='my-20 '>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-10'>
           <div className='max-w-lg w-full h-[400px]'>

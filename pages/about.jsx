@@ -6,10 +6,14 @@ import Image from 'next/image'
 import Img1 from '../public/assets/blogcard.jpeg'
 // import Img2 from ''
 import Mission from '../components/About/Mission'
+import Head from 'next/head'
 
 const About = () => {
   return (
     <div>
+      <Head>
+        <title>About</title>
+      </Head>
       <Container>
         <div className="grid md:grid-cols-2 grid-cols-1 gap-4 mt-20">
           <div>

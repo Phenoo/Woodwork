@@ -21,10 +21,10 @@ const ProductCard = ({item}) => {
 
   const {title, price, stock, mainImage, slug, _id} = item;
   return(
-    <div className="w-[300px] md:w-[260px] h-[350px] flex justify-between flex-col border-l-2 border-black px-2 cursor-pointer animated fadeIn" key={_id}>
+    <div className="w-[300px] md:w-[260px] h-[350px] flex justify-between flex-col border-l-2 border-secondary px-2 my-2 cursor-pointer animated fadeIn" key={_id}>
           <div className="relative h-[280px] p-1" onMouseOver={() => setShow(true)} onMouseOut={() => setShow(false)}>
             {show ? 
-            <div className="absolute h-full w-full bg-gray-500/75 transition-all duration-150 ease-out hover:ease-in">
+            <div className="absolute w-[275px] md:w-[235px] h-[270px] bg-gray-500/75 transition-all duration-150 ease-out hover:ease-in">
               <div className="flex items-center justify-center  gap-4 h-full w-full">
                 <button className="px-2 py-3 text-[12px] rounded-full bg-white text-black capitalize"
                   onClick={() => addToCart(item, qty)}
@@ -44,8 +44,9 @@ const ProductCard = ({item}) => {
             <Image
               src={urlFor(mainImage).url()}
               alt={title}
-              width={200}
+              width={300}
               height={280}
+              className="h-[270px]"
             />
         }
          </div>

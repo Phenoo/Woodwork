@@ -7,12 +7,12 @@ import Sidebar from '../Sidebar/index'
 import { useStateContext } from '../../context/StateContext'
 import { urlFor } from '../../utils/client'
 import Cross from '../icons/Cross'
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
 import { useCart } from 'react-use-cart'
 import Link from 'next/link'
+import PaystackHookExample from '../../utils/usePayStack'
 
 const Cart = () => {
-  const {cartItems, totalQuantities, totalPrice, removeBtn, incrementQuantity, toggleCartItemQuanitity} =  useStateContext();
+  const {cartItems, totalQuantities, totalPrice, removeBtn, setShowCart} =  useStateContext();
   const { updateItemQuantity} = useCart();
   return (
     <Sidebar>
@@ -61,7 +61,7 @@ const Cart = () => {
                 )
               })
             }
-                  <article className=' bg-white justify-end flex flex-col gap-y-2 capitalize mt-6'>
+                  <article className='  justify-end flex flex-col gap-y-2 capitalize mt-6'>
                     <div className='flex flex-row justify-between items-center'>
                       <span>
                         <h6>
@@ -98,7 +98,7 @@ const Cart = () => {
                         </p>
                       </span>
                     </div>
-                    <hr className='bg-[#ddd] my-2' />
+                    <hr className='bg-secondary my-2' />
                     <div className='flex flex-row justify-between items-center'>
                       <span>
                         <h6 className='text-xl font-bold'>
@@ -111,9 +111,12 @@ const Cart = () => {
                         </p>
                       </span>
                     </div>
-                      <button className='bg-black text-white uppercase p-4 text-center mt-4'>
+                    <Link href='/checkout'>
+                      <button className='bg-secondary text-primary-2 font-bold uppercase p-4 text-center mt-4 w-full' onClick={() => setShowCart(false)}>
                         proceed to checkout
                       </button>
+                    </Link>
+
                   </article>
 
             </div>      

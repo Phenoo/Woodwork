@@ -50,7 +50,7 @@ const Navbar = () => {
             </div>
             <div className=" flex items-center justify-end flex-1 space-x-8">
               <div className=" flex items-center gap-4">
-                <button>
+                <button className='hidden lg:flex'>
                   <Link href='/wishlist' className=" text-2xl">
                     <AiOutlineHeart />
                   </Link>
@@ -59,7 +59,7 @@ const Navbar = () => {
                   <span>
                     cart           
                   </span>
-                  <span className='rounded-full border border-black flex items-center justify-center px-2 py-1'>
+                  <span className='rounded-full border border-secondary flex items-center justify-center px-2 py-1'>
                     {totalQuantities}
                   </span>
                 </button>
