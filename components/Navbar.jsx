@@ -8,7 +8,7 @@ import { AiOutlineHeart } from 'react-icons/ai'
 import { useStateContext } from '../context/StateContext'
 
 import Cart from './Cart'
-import Menu from './icons/MEnu'
+import Menu from './icons/Menu'
 import Cross from './icons/Cross'
 import UserNav from './userNav'
 import Switch from './Switch'
