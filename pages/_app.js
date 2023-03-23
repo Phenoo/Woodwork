@@ -1,4 +1,4 @@
-import RootLayout from '../components/layout'
+import RootLayout from '../components/layout/index'
 import '../styles/main.css'
 import '../styles/globals.css'
 import {StateContext} from '../context/StateContext'

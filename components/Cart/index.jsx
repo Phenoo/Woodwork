@@ -10,6 +10,7 @@ import Cross from '../icons/Cross'
 import { useCart } from 'react-use-cart'
 import Link from 'next/link'
 import PaystackHookExample from '../../utils/usePayStack'
+import Image from 'next/image'
 
 const Cart = () => {
   const {cartItems, totalQuantities, totalPrice, removeBtn, setShowCart} =  useStateContext();
@@ -29,7 +30,7 @@ const Cart = () => {
                 return(
                   <article className='flex flex-row gap-4 w-full my-2' key={item._id}>
                     <div className='w-[70px] h-[70px]'>
-                      <img src={urlFor(item.mainImage).url()} alt={item.title} height={70} width={70} />
+                      <Image src={urlFor(item.mainImage).url()} alt={item.title} height={70} width={70} />
                     </div>
                     <div className='flex flex-col gap-1 w-full'>
                       <div className='flex justify-between'>
