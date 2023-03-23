@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Hero from '../components/Hero'
+import HeroSection from '../components/Hero/HeroSection'
 import Featured from '../components/Featured'
 import NewArrivals from '../components/NewArrivals'
 import Brands from '../components/Brands'
@@ -20,7 +20,7 @@ export default function Home({posts}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className=''>
-        <Hero />
+        <HeroSection />
         <Featured postsThree={postsThree} />
         <Brands />
         <NewArrivals postsThree={postsThree}  />

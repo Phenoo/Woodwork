@@ -1,7 +1,7 @@
 import Container from '../Container/Container'
 import { useEffect, useState } from 'react';
 
-import s from '../hero/Hero.module.css'
+import s from '../Hero/Hero.module.css'
 
 
 function getWindowDimensions() {
@@ -15,7 +15,7 @@ function getWindowDimensions() {
 
 
 
-const Hero = () => {
+const HeroSection = () => {
   const [width, setWidth] = useState();
   const [height, setheight] = useState();
 
@@ -75,4 +75,4 @@ const Hero = () => {
   return null;
 }
 
-export default Hero
+export default HeroSection
