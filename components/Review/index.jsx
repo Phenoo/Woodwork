@@ -1,7 +1,7 @@
 import React from 'react'
 import Tophead from '../Tophead'
 import ReviewCard from './ReviewCard'
-import Container from '../Container'
+import Container from '../Container/Container'
 import { FaStar } from 'react-icons/fa'
 import Image from 'next/image'
 

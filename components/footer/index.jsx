@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 
 import Logo from '../Logo'
-import Container from '../Container'
+import Container from '../Container/Container'
 import Social from './Social';
 
 import s from './Social.module.css'

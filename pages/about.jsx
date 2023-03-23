@@ -1,10 +1,8 @@
 import React from 'react'
-import Container from '../components/Container'
+import Container from '../components/Container/Container'
 import AboutText from '../components/About/AboutText'
 import Image from 'next/image'
 
-import Img1 from '../public/assets/blogcard.jpeg'
-// import Img2 from ''
 import Mission from '../components/About/Mission'
 import Head from 'next/head'
 

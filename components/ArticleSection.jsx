@@ -1,6 +1,6 @@
 import React from 'react'
 import Tophead from "./Tophead"
-import Container from "./Container"
+import Container from "./Container/Container"
 
 import Img2 from '.././public/assets/blogcard2.jpeg'
 import Img3 from '.././public/assets/blogcard3.jpeg'

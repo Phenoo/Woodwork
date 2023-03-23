@@ -7,7 +7,7 @@ import PaystackHookExample from '../utils/usePayStack';
 
 
 import Link from 'next/link';
-import Container from '../components/Container';
+import Container from '../components/Container/Container';
 import { useState } from 'react';
 import Head from 'next/head';
 

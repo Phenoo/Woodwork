@@ -1,11 +1,7 @@
 import Tophead from "./Tophead"
 
 
-import Img1 from '.././public/assets/item5.jpeg'
-import Img2 from '.././public/assets/item2.jpeg'
-import Img3 from '.././public/assets/item3.jpeg'
-import Img4 from '.././public/assets/item4.jpeg'
-import ProductCard from "./ProductCard"
+import ProductCard from "./ProductCard/ProductCard"
 import Link from "next/link"
 
 

@@ -1,8 +1,7 @@
-import Container from "./Container"
 import Tophead from "./Tophead"
 
 
-import ProductCard from "./ProductCard"
+import ProductCard from "./ProductCard/ProductCard"
 import Link from "next/link"
 
 

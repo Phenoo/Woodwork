@@ -1,8 +1,7 @@
       
 import React, { useState } from 'react'
-import Container from '../../components/Container'
+import Container from '../../components/Container/Container'
 import Tophead from '../../components/Tophead'
-import groq from 'groq'
 import ShopContainer from '../../components/Shop'
 import Link from 'next/link'
 

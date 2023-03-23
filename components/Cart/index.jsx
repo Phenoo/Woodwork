@@ -9,7 +9,6 @@ import { urlFor } from '../../utils/client'
 import Cross from '../icons/Cross'
 import { useCart } from 'react-use-cart'
 import Link from 'next/link'
-import PaystackHookExample from '../../utils/usePayStack'
 import Image from 'next/image'
 
 const Cart = () => {
@@ -45,17 +44,6 @@ const Cart = () => {
                         <button className='border border-black p-1' onClick={() => removeBtn(item)}>
                           <Cross />
                         </button>
-                        {/* <div className='border border-black flex   flex-row justify-between w-full'>
-                          <p className='p-1  px-3'>{item.quantity}</p>
-                          <div className='flex flex-row gap-1'>
-                            <button className='p-2 border-l border-black'
-                              onClick={() => updateItemQuantity(item._id, item.quantity - 1)}
-                            ><AiOutlineMinus /></button>
-                            <button className='p-2 border-l border-black' 
-                              onClick={() => updateItemQuantity(item._id, item.quantity + 1)}
-                            ><AiOutlinePlus /></button>
-                          </div>
-                        </div> */}
                       </div>
                     </div>
                   </article>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Container from '../../components/Container'
+import Container from '../../components/Container/Container'
 import { sanityClient, urlFor } from '../../utils/client'
 import Image from 'next/image'
 

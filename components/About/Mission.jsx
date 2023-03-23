@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import Img1 from '../../public/assets/value.jpeg'
-import Container from '../Container'
+import Container from '../Container/Container'
 import Tophead from '../Tophead'
 
 const Mission = () => {

@@ -3,12 +3,11 @@ import BlogCard from '../components/blogCard'
 import Tophead from '../components/Tophead'
 
 
-import Img1 from '../public/assets/blogmain.jpeg'
 import Img2 from '../public/assets/blogcard2.jpeg'
 import Img3 from '../public/assets/blogcard3.jpeg'
 import Img4 from '../public/assets/blogcard.jpeg'
 import Image from 'next/image'
-import Container from '../components/Container'
+import Container from '../components/Container/Container'
 import Head from 'next/head'
 
 const Blogs = () => {

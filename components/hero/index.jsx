@@ -1,8 +1,7 @@
-import Container from '../Container'
+import Container from '../Container/Container'
 import { useEffect, useState } from 'react';
 
 import s from '../hero/Hero.module.css'
-import KitchenCanvas from '../Canvas/Kitchen';
 
 
 function getWindowDimensions() {
