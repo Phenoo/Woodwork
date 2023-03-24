@@ -5,14 +5,16 @@ import Logo from '../Logo'
 import Container from '../Container/Container'
 import Social from './Social';
 
-import s from './Social.module.css'
 
 
 import { FaYinYang } from 'react-icons/fa';
+import Link from 'next/link';
+import { useStateContext } from '../../context/StateContext';
 
 const Footer = () => {
+  const {scrollTo} = useStateContext()
   const info = ["Our story", "faq", "returns", "terms of service", "privacy policy"];
-  const shop = ["everything", "chairs", "tables", "sets of tables", "office"];
+  const shop = ["Sofa", "chairs", "tables", "lights"];
 
 
   return (
@@ -20,6 +22,7 @@ const Footer = () => {
       <Container>
         <div className=" mt-[100px]">
           <Logo />
+          <br />
           <div className="my-4 grid md:grid-cols-3 lg:grid-cols-4 gap-12">
             <div>
               <h6 className='font-bold text-xl'>
@@ -44,17 +47,17 @@ const Footer = () => {
               <ul className="mt-2">
                 {
                   shop.map((item, i) => (
-                    <li key={i}>
-                      <a href="#a" className="capitalize">
+                    <li key={i} onClick={() => scrollTo('di')}>
+                      <Link   href={"/shop/category/" + item} className="capitalize">
                         {item}
-                      </a>
+                      </Link>
                     </li>
                   ))
                 }
               </ul>
             </div>
             <Social />
-            <div className='flex justify-end items-end'>
+            <div className='flex justify-end items-end' onClick={() => scrollTo('di')}>
               <FaYinYang className='animate-spin' size={50} />
             </div>
           </div>

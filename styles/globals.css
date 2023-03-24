@@ -1,13 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit&family=family=Anton&family=Itim&family=Work+Sans&family=Montserrat&family=Oswald&family=Cabin&display=swap');
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* @layer utilities{
-    .accent-0{
-
-    }
-} */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cabin&family=Kanit&family=Oswald&family=Work+Sans&display=swap');
 
 html,
 body {
@@ -104,7 +95,7 @@ label{
 }
 
 .mySwiper .swiper-pagination-bullet{
-    background: #111;
+    @apply bg-secondary-2;
 }
 
 .fixedxx {

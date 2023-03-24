@@ -38,7 +38,7 @@ const ArticleSection = () => {
   return (
     <div className="my-16">
       <Tophead title='enjoy our articles' align='text-center'/>
-        <div className='py-8 mt-4 border-y border-black flex justify-center '>
+        <div className='py-8 mt-4 border-y border-secondary flex justify-center '>
           <Container>
               <Swiper
                     slidesPerView={"auto"}
@@ -59,7 +59,7 @@ const ArticleSection = () => {
               </Swiper>
  
             <div className="flex justify-center mt-8">
-              <button className='font-bold uppercase border border-black p-2 md:p-3'>
+              <button className='font-bold uppercase border border-secondary p-2 md:p-3'>
                 <Link href='/blog'>
                   read all articles
                 </Link>

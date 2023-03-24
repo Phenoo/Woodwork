@@ -6,10 +6,12 @@ import ShopContainer from '../../components/Shop'
 import Link from 'next/link'
 
 import cn from 'clsx'
+import { useStateContext } from '../../context/StateContext'
 
 
 
 const ShopLayout = ({posts, categories}) => {
+  const {scrollTo} = useStateContext()
   const [activeFilter, setActiveFilter] = useState('')
   const [toggleFilter, setToggleFilter] = useState(false)  
   const [activeFilterx, setActiveFilterx] = useState('')
@@ -17,6 +19,7 @@ const ShopLayout = ({posts, categories}) => {
   const [activeBtn, setActiveBtn] = useState();
   const [categoryvalue, setCategoryvalue] = useState('Categories')
   const [relvalue, setRelvalue] = useState('Relevance')
+
 
   
   const handleClick = (e, filter) => {
@@ -80,7 +83,7 @@ const ShopLayout = ({posts, categories}) => {
                 <button
                   type="button"
                   onClick={(e) => handleClick(e, 'sort')}
-                  className="flex justify-between w-full rounded-sm border capitalize border-secondary px-4 py-3 bg-accent-0 text-sm leading-5 font-medium text-primary hover:text-accent-5 focus:outline-none focus:border-blue-300 focus:shadow-outline-normal active:bg-accent-1 active:text-accent-8 transition ease-in-out duration-150"
+                  className="flex justify-between w-full rounded-sm border capitalize border-secondary px-4 py-3 bg-primary text-sm leading-5 font-medium text-primary hover:text-accent-5 focus:outline-none focus:border-blue-300 focus:shadow-outline-normal active:bg-accent-1 active:text-accent-8 transition ease-in-out duration-150"
                   id="options-menu"
                   aria-haspopup="true"
                   aria-expanded="true"
@@ -103,12 +106,10 @@ const ShopLayout = ({posts, categories}) => {
               </span>
             </div>
 
-
-
             
-          <div className={`origin-top-left absolute bg-primary lg:relative left-0 mt-2 w-full rounded-md shadow-lg lg:shadow-none z-10 mb-10 lg:block ${
+          <div className={`origin-top-left bg-primary absolute lg:relative left-0 mt-2 w-full rounded-md shadow-lg lg:shadow-none z-10 mb-10 lg:block ${
     	      activeFilter !== 'sort' || toggleFilter !== true ? 'hidden' : ''}`}>
-            <div className="rounded-sm bg-accent-0 shadow-xs lg:bg-none lg:shadow-none">
+            <div className="rounded-sm  shadow-xs lg:bg-none lg:shadow-none">
               <div
                 role="menu"
                 aria-orientation="vertical"
@@ -138,7 +139,7 @@ const ShopLayout = ({posts, categories}) => {
                       onClick={(e) => handleClick(e, 'sort')}
                     
                     >
-                    <button className={`block text-primary lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4 capitalize ${activeBtn === 'all' ? "underline" : ""}`}
+                    <button className={`block  text-primary lg:inline-block px-4 py-2 lg:p-0 lg:my-2 lg:mx-4 capitalize ${activeBtn === 'all' ? "underline" : ""}`}
                       onClick={() => {
                         setActiveBtn('all')
                         setCategoryvalue('all categories')
@@ -169,6 +170,7 @@ const ShopLayout = ({posts, categories}) => {
                         onClick={(e) => {
                           setActiveBtn(index)
                           setCategoryvalue(category.title)
+                          scrollTo('di')
                         
                         }}
                           className={
@@ -204,7 +206,7 @@ const ShopLayout = ({posts, categories}) => {
                   onClick={(e) => {
                     handleClickx(e, 'sort')
                 }}
-                  className="flex justify-between w-full rounded-sm border border-secondary px-4 py-3 bg-accent-0 text-primary text-sm leading-5 font-medium  hover:text-accent-5 focus:outline-none focus:border-blue-300 focus:shadow-outline-normal active:bg-accent-1 active:text-accent-8 transition ease-in-out duration-150"
+                  className="flex justify-between w-full rounded-sm border border-secondary px-4 py-3 bg-primary text-primary text-sm leading-5 font-medium  hover:text-accent-5 focus:outline-none focus:border-blue-300 focus:shadow-outline-normal active:bg-accent-1 active:text-accent-8 transition ease-in-out duration-150"
                   id="options-menu"
                   aria-haspopup="true"
                   aria-expanded="true"

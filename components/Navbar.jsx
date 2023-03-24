@@ -17,10 +17,10 @@ const Navbar = () => {
   const { showCart, setShowCart, totalQuantities } = useStateContext();
   const [mobile, setMobile] =  useState(false)
   return (
-    <header className='sticky min-h-[74px] top-0 bg-primary z-40 transition-all duration-150'>
+    <header className='sticky min-h-[74px] top-0 bg-primary z-40 transition-all duration-150' id='nav'>
       <div className='h-[4px]' />
         <Container >
-          <div className='flex flex-row justify-between my-2 py-2 md:py-2 border-y-2 border-secondary z-20' id='nav'>
+          <div className='flex flex-row justify-between my-2 py-2 md:py-2 border-y-2 border-secondary z-20' >
             <div className='flex items-center flex-1'>
               <div className='lg:hidden '>
                 <button onClick={() => setMobile(true)} className='z-20'>
@@ -44,9 +44,7 @@ const Navbar = () => {
               </nav>
             </div>
             <div className="justify-center flex-1  lg:flex">
-              <Link href="/">
                 <Logo />
-              </Link>
             </div>
             <div className=" flex items-center justify-end flex-1 space-x-8">
               <div className=" flex items-center gap-4">

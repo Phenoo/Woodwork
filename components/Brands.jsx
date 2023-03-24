@@ -28,10 +28,10 @@ const Brands = () => {
   return (
     <div className="my-16">
       <Tophead title='our brands' align='text-center' />
-      <div className="my-4 border-y border-black flex flex-col justify-center items-center">
+      <div className="my-4 border-y border-secondary flex flex-col justify-center items-center">
         <div className="grid grid-cols-5 ">
           {icons.map((item) => (
-            <span key={item.id} className=" flex justify-center items-center border-l-2 border-black px-6 md:px-12 cursor-pointer text-3xl md:text-5xl h-[90px] lg:h-[150px]">
+            <span key={item.id} className=" flex justify-center items-center border-l-2 border-secondary px-6 md:px-12 cursor-pointer text-3xl md:text-5xl h-[90px] lg:h-[150px]">
               {item.icon}
             </span>
           ))}

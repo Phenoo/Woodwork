@@ -77,6 +77,15 @@ export const StateContext = ({ children }) => {
     setTotalQuantities(0)
   }
 
+  const scrollTo = (id) => {
+    let element = document.getElementById(id);
+    element.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    })
+  }
+
 
 
 
@@ -93,7 +102,8 @@ export const StateContext = ({ children }) => {
         removeBtn,
         incrementQuantity,
         clearCart,
-        toggleCartItemQuanitity
+        toggleCartItemQuanitity,
+        scrollTo
       }}
     >
       {children}

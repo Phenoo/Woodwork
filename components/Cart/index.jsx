@@ -12,7 +12,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const Cart = () => {
-  const {cartItems, totalQuantities, totalPrice, removeBtn, setShowCart} =  useStateContext();
+  const {cartItems, totalQuantities, totalPrice, removeBtn, setShowCart, scrollTo} =  useStateContext();
   const { updateItemQuantity} = useCart();
   return (
     <Sidebar>
@@ -101,7 +101,11 @@ const Cart = () => {
                       </span>
                     </div>
                     <Link href='/checkout'>
-                      <button className='bg-secondary text-primary-2 font-bold uppercase p-4 text-center mt-4 w-full' onClick={() => setShowCart(false)}>
+                      <button className='bg-secondary text-primary-2 font-bold uppercase p-4 text-center mt-4 w-full' 
+                          onClick={() => {
+                            setShowCart(false)
+                            scrollTo('di')
+                          }}>
                         proceed to checkout
                       </button>
                     </Link>

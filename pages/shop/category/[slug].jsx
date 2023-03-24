@@ -21,7 +21,7 @@ const CategoryPage = ({categories}) => {
   return (
     <>
       <Head>
-        <title>{slug} Category</title>
+        <title>Category</title>
       </Head>
       <ShopLayout  posts={posts} categories={categories} />
     </>

@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
     <ThemeProvider>
 
       <CartProvider>
+        <div className="di" id='di' />
         <Navbar />
         <Toaster />
         <main>{children}</main>

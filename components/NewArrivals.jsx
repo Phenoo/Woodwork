@@ -9,7 +9,7 @@ const NewArrivals = ({postsThree}) => {
   return(
       <div className="my-16">
         <Tophead title="New arrivials" align='text-center' />
-        <div className="my-4 border-y border-black flex flex-col justify-center items-center">
+        <div className="my-4 border-y border-secondary flex flex-col justify-center items-center">
           <div className="flex gap-4 flex-wrap justify-center">
             {
               postsThree.map((item) => (
@@ -19,7 +19,7 @@ const NewArrivals = ({postsThree}) => {
           </div>
         </div>
         <div className="flex justify-center items-center">
-        <button className='font-bold uppercase border border-black p-2 md:p-3'>
+        <button className='font-bold uppercase border border-secondary p-2 md:p-3'>
             <Link href='/shop'> 
               shop all 
             </Link>

@@ -53,7 +53,7 @@ const HeroSection = () => {
               </h2>
             </div>
             <div className=''>
-              <button className='rounded-xl border-black border py-1 px-2'>
+              <button className='rounded-xl border-secondary border py-1 px-2'>
                 wood
               </button>
               <p className='font-bold text-md'>

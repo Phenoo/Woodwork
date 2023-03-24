@@ -39,10 +39,10 @@ const Review = () => {
       <div className="mx-4 md:mx-8">
         <Tophead title="our user reviews" />
       </div>
-      <div className="border-y border-black py-8 my-4">
+      <div className="border-y border-secondary py-8 my-4">
         <Container>
           <div className="flex flex-col lg:flex-row gap-12">
-            <div className='shadow-md w-full lg:w-[300px] p-4 rounded-md flex flex-col justify-center items-center cursor-pointer'>
+            <div className='h-[240px] shadow-md bg-white text-black w-full lg:w-[300px] p-4 rounded-md flex flex-col justify-center items-center cursor-pointer'>
                 <span>
                   <Image
                     src={Img1}

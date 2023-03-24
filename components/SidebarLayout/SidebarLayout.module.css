@@ -3,7 +3,7 @@
 }
 
 .header {
-    @apply sticky top-0 pl-4 py-4 pr-6 flex items-center justify-between box-border w-full z-10 bg-accent-0;
+    @apply sticky top-0 pl-4 py-4 pr-6 flex items-center justify-between box-border w-full z-10 bg-primary;
     min-height: 66px;
 }
 

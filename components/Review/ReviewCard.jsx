@@ -4,10 +4,10 @@ import {FaStar } from 'react-icons/fa'
 
 const ReviewCard = ({item}) => {
   return (
-    <article className='w-[300px] bg-white p-4 rounded-md cursor-pointer '>
+    <article className='w-[300px] bg-white text-black p-4 rounded-md cursor-pointer '>
       <div className='flex flex-row gap-4'>
         <div>
-          <div className='w-[40px] h-[40px] rounded-full bg-black' />
+          <div className='w-[40px] h-[40px] rounded-full bg-green' />
         </div>
         <div>
           <h4 className='text-md'>

@@ -9,15 +9,10 @@ import { useStateContext } from "../../context/StateContext";
 
 const ProductCard = ({item}) => {
   const [show, setShow] = useState(false)
-  const {addToCart, qty} = useStateContext()
-  const scrollTo = (id) => {
-    let element = document.getElementById(id);
-    element.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-      inline: 'nearest'
-    })
-  }
+  const {addToCart, qty, scrollTo} = useStateContext();
+
+
+
 
   const {title, price, stock, mainImage, slug, _id} = item;
   return(
@@ -30,8 +25,10 @@ const ProductCard = ({item}) => {
                   onClick={() => addToCart(item, qty)}
                 >
                   add to cart</button>
-                <button className="px-2 py-3 text-[12px] rounded-full bg-black text-white capitalize">
-                  <Link href={"/product/" +  slug.current} onClick={() => scrollTo('nav')}>
+                <button className="px-2 py-3 text-[12px] rounded-full bg-black text-white capitalize"
+                  onClick={() => scrollTo('di')}
+                >
+                  <Link href={"/product/" +  slug.current} >
                     view item
                   </Link>
                   </button>
