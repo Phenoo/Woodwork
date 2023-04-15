@@ -37,7 +37,7 @@ const Cart = () => {
                             {item.title}
                           </h6>
                           <p className='font-bold text-xl '>
-                          $ {item.price.toLocaleString()}
+                            ₦ {item.price.toLocaleString()}
                           </p>
                       </div>
                       <div className='flex flex-row gap-2 mt-2'>
@@ -59,7 +59,7 @@ const Cart = () => {
                       </span>
                       <span>
                       <p className='uppercase font-bold'>
-                          $ {totalPrice.toLocaleString()}
+                        ₦ {totalPrice.toLocaleString()}
                         </p>
                       </span>
                     </div>
@@ -96,7 +96,7 @@ const Cart = () => {
                       </span>
                       <span>
                       <p className='uppercase font-bold'>
-                          $ {totalPrice.toLocaleString()}
+                        ₦ {totalPrice.toLocaleString()}
                         </p>
                       </span>
                     </div>

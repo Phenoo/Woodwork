@@ -15,6 +15,8 @@
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.3.1",
     "clsx": "^1.2.1",
+    "firebase": "^9.19.1",
+    "firebase-app": "^0.0.1",
     "framer-motion": "^9.0.4",
     "groq": "^3.4.0",
     "maath": "^0.5.3",

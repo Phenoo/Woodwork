@@ -30,7 +30,7 @@ const Social = () => {
         <ul className="flex gap-4 flex-row mt-2">
         {
             social.map((item, i) => (
-              <li key={i} className="text-2xl p-2 border border-secondary rounded-full hover:bg-secondary hover:text-secondary cursor-pointer ">
+              <li key={i} className="text-2xl p-2 border border-secondary rounded-full hover:bg-secondary hover:text-secondary cursor-pointer transition-all ">
                 <a href="#a"> 
                   {item.icon}
                 </a>

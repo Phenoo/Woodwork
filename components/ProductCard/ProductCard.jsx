@@ -59,7 +59,7 @@ const ProductCard = ({item}) => {
         </div>
         <div>
           <h6 className="font-bold">
-            ${price.toLocaleString()}
+            ₦{price.toLocaleString()}
           </h6>
         </div>
       </div>
